@@ -1,0 +1,535 @@
+@charset "utf-8";
+
+@font-face {
+    font-family: 'OKDDUNG';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2206-02@1.0/OKDDUNG.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+ul,
+ol {
+    list-style: none;
+}
+
+img,
+video,
+iframe {
+    vertical-align: middle;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+body {
+    font-family: 'Pretendard';
+    font-size: 14px;
+    min-width: 1450px;
+    overflow-x: hidden;
+    line-height: 1.5;
+    color: #333;
+    background: url(../images/main-re.svg) no-repeat center 90px;
+    background-size: 100%;
+}
+
+.cursor {
+    position: absolute;
+    z-index: 9999;
+}
+
+
+
+header {
+    border-bottom: 2px solid skyblue;
+}
+
+.header_inner {
+    width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.gnb {
+    display: flex;
+}
+
+.gnb>li {
+    font-size: 20px;
+    font-weight: bold;
+    padding: 30px 40px;
+}
+
+.gnb>li {
+    position: relative;
+}
+
+.gnb>li>a:hover {
+    color: goldenrod;
+}
+
+.sub {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    z-index: 5;
+    display: none;
+}
+
+.sub li {
+    font-size: 14px;
+    font-weight: normal;
+    padding: 10px 0;
+    text-align: center;
+}
+
+.sub li a {
+    color: #666;
+}
+
+.sub li a:hover {
+    color: goldenrod;
+    text-decoration: underline;
+
+}
+
+header {
+    position: relative;
+}
+
+.sub_bg {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    height: 200px;
+    width: 100%;
+    background-color: lightgoldenrodyellow;
+    border-bottom: 2px solid goldenrod;
+    z-index: 4;
+    padding-bottom: 10px;
+}
+
+.img {
+    width: 1320px;
+    margin: auto;
+
+}
+
+.search_box {
+    right: 30px;
+    top: 50%;
+    box-sizing: border-box;
+
+}
+
+.search_box li {
+    padding: 2px 0;
+
+}
+
+.search_box input {
+    border: 1px solid goldenrod;
+    border-radius: 10px;
+    background: url(../images/q2.png) no-repeat left center;
+    padding: 5px 0;
+    padding-left: 15px;
+}
+
+
+/*main_banner*/
+.main_banner {
+    text-align: center;
+}
+
+.main_banner img {
+    max-width: 100%;
+
+}
+
+.mb_pag span {
+    background-color: #fff;
+}
+
+.mb_next,
+.mb_prev {
+    color: #fff;
+}
+
+/*character*/
+#character {
+    width: 1180px;
+    margin: 0 auto;
+    text-align: center;
+    height: 700px;
+    padding-top: 100px;
+    position: relative;
+}
+
+#character h2 {
+    padding: 10px 0;
+    clear: both;
+    color: #fff;
+    background-color: #f598a4;
+    border: none;
+    font-size: 16px;
+    font-weight: 600;
+    border-radius: 22px;
+    width: 120px;
+    position: absolute;
+    top: 65%;
+    left: 45%;
+
+}
+
+
+dl {
+    width: 380px;
+    float: left;
+    box-sizing: border-box;
+}
+
+.margin {
+    margin: 0 20px;
+}
+
+dt img {
+    width: 100%;
+}
+
+/*menu*/
+#menu {
+    width: 1320px;
+    margin: 30px auto;
+}
+
+
+
+.title {
+    padding: 100px 0;
+    text-align: center;
+}
+
+.menu_box {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.menu_box li {
+    position: relative;
+    width: 300px;
+    height: 200px;
+}
+
+.menu_box li img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    transition: all 0.4s;
+    z-index: 2;
+}
+
+.menu_box li.pen {
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.menu_box a:hover img {
+    top: -50px;
+}
+
+/*event*/
+#event {
+    width: 1320px;
+    margin: 100px auto;
+}
+
+#event .title {
+    padding-top: 300px;
+    text-align: center;
+}
+
+
+.event_box {
+    display: flex;
+    justify-content: space-evenly;
+
+}
+
+.event_box li {
+    position: relative;
+    overflow: hidden;
+    margin-bottom: 200px;
+    border-radius: 45px;
+    box-shadow: 3px 3px 3px lightgrey
+}
+
+.event_box li::before {
+    position: absolute;
+    top: 0;
+    left: -75%;
+    z-index: 2;
+    display: block;
+    content: '';
+    width: 50%;
+    height: 100%;
+    background: -webkit-linear-gradient(left, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, .3) 100%);
+    background: linear-gradient(to right, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, .3) 100%);
+    -webkit-transform: skewX(-25deg);
+    transform: skewX(-25deg);
+    opacity: 0;
+}
+
+.event_box li:hover::before {
+    -webkit-animation: shine .75s;
+    animation: shine .75s;
+}
+
+@-webkit-keyframes shine {
+    0% {
+        opacity: 1;
+
+    }
+
+    40% {
+        opacity: 1;
+
+    }
+
+    100% {
+        left: 125%;
+        opacity: 0;
+
+    }
+}
+
+@keyframes shine {
+    0% {
+        opacity: 1;
+
+    }
+
+    40% {
+        opacity: 1;
+
+    }
+
+    100% {
+        left: 125%;
+        opacity: 0;
+
+    }
+}
+
+/*custom*/
+#custom {
+    width: 1320px;
+    margin: 100px auto;
+
+}
+
+
+.custom_box {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-content: space-between;
+    position: relative;
+
+
+}
+
+.custom_text1 {
+    position: absolute;
+    top: 38%;
+    left: 13%;
+    transform: translate(-50%, -50%);
+    color: #555;
+    font-size: 20px;
+    font-weight: bold;
+    text-align: center;
+}
+
+.custom_text2 {
+    position: absolute;
+    top: 38%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: #555;
+    font-size: 20px;
+    font-weight: bold;
+    text-align: center;
+}
+
+.custom_text3 {
+    position: absolute;
+    top: 88%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: #555;
+    font-size: 20px;
+    font-weight: bold;
+    text-align: center;
+}
+
+.custom_text4 {
+    position: absolute;
+    top: 88%;
+    left: 87%;
+    transform: translate(-50%, -50%);
+    color: #555;
+    font-size: 20px;
+    font-weight: bold;
+    text-align: center;
+}
+
+
+.custom_red {
+    color: #ef6173;
+}
+
+.custom_blue {
+    color: #28b7ea;
+}
+
+
+.custom_box li a {
+    width: 350px;
+    padding: 20px 0;
+    float: left;
+    box-sizing: border-box;
+}
+
+/*news*/
+#news {
+    width: 1320px;
+    margin: 1px auto;
+    margin-bottom: 50px;
+}
+
+#news .title {
+    padding-top: 100px;
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.news_box {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.news_box li .pen {
+    position: absolute;
+    opacity: 0;
+    right: -100px;
+    top: -20px;
+    z-index: 3;
+}
+
+
+.news_box li:hover .pen {
+    opacity: 1;
+}
+
+
+.news_box li {
+    position: relative;
+    width: 394px;
+    height: 363px;
+    transition: all 0.4s;
+}
+
+
+
+.news_box li img:nth-child(1) {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 2;
+}
+
+.news_box li:hover {
+    transform: translateY(-50px);
+}
+
+
+/*footer*/
+#footer {
+    background-color: goldenrod;
+    border-radius: 150px 150px 0 0;
+}
+
+.footer_logo {
+    width: 200px;
+    padding: 0 50px;
+}
+
+.footer_inner {
+    width: 1320px;
+    margin: 0 auto;
+    display: flex;
+    padding: 30px 0px;
+    align-items: center;
+}
+
+.footer_text {
+    padding-left: 50px;
+}
+
+.footer_text ul {
+    display: flex;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+.footer_text {
+    color: #fff;
+}
+
+.footer_text ul li a {
+    color: #fff;
+}
+
+.footer_text ul li {
+    border-right: 1px solid #ccc;
+    line-height: 100%;
+    margin-right: 20px;
+    padding-right: 20px;
+}
+
+.footer_text ul li:last-child {
+    border: none;
+    padding-right: 0;
+    margin-right: 0;
+}
+
+.familysite {
+    float: right;
+    height: 50px;
+    width: 100px;
+
+}
+
+.familysite select {
+    float: right;
+    width: 180px;
+    margin-top: 5px;
+    margin-right: 100px;
+    font-size: 14px;
+    border: 1px solid gold;
+    border-radius: 5px;
+}
+
+.web_logo {
+    text-align: center;
+}
